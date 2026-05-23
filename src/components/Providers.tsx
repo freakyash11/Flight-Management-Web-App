@@ -12,6 +12,23 @@ export default function Providers({ children }: { children: ReactNode }) {
   const clearSession = useUserStore((s) => s.clearSession);
 
   useEffect(() => {
+    if (
+      typeof window !== 'undefined' &&
+      'serviceWorker' in navigator &&
+      window.location.hostname !== 'localhost'
+    ) {
+      navigator.serviceWorker
+        .register('/sw.js')
+        .then((registration) => {
+          console.log('Service Worker registered successfully:', registration.scope);
+        })
+        .catch((error) => {
+          console.error('Service Worker registration failed:', error);
+        });
+    }
+  }, []);
+
+  useEffect(() => {
     const supabase = createClient();
 
     // Initial session

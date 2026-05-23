@@ -1,1 +1,90 @@
-if(!self.define){let e,s={};const a=(a,n)=>(a=new URL(a+".js",n).href,s[a]||new Promise(s=>{if("document"in self){const e=document.createElement("script");e.src=a,e.onload=s,document.head.appendChild(e)}else e=a,importScripts(a),s()}).then(()=>{let e=s[a];if(!e)throw new Error(`Module ${a} didn’t register its module`);return e}));self.define=(n,i)=>{const t=e||("document"in self?document.currentScript.src:"")||location.href;if(s[t])return;let c={};const r=e=>a(e,t),d={module:{uri:t},exports:c,require:r};s[t]=Promise.all(n.map(e=>d[e]||r(e))).then(e=>(i(...e),c))}}define(["./workbox-f1770938"],function(e){"use strict";importScripts(),self.skipWaiting(),e.clientsClaim(),e.precacheAndRoute([{url:"/_next/static/chunks/131-5d739fb673afcfec.js",revision:"5d739fb673afcfec"},{url:"/_next/static/chunks/44530001-8f75776a0063f094.js",revision:"8f75776a0063f094"},{url:"/_next/static/chunks/4bd1b696-215e5051988c3dde.js",revision:"215e5051988c3dde"},{url:"/_next/static/chunks/500-c99b8dfd3de17c86.js",revision:"c99b8dfd3de17c86"},{url:"/_next/static/chunks/630-9bae0d06cf9da9f5.js",revision:"9bae0d06cf9da9f5"},{url:"/_next/static/chunks/845-36b3c0da09a5f9a8.js",revision:"36b3c0da09a5f9a8"},{url:"/_next/static/chunks/899.1813981119fa1f8a.js",revision:"1813981119fa1f8a"},{url:"/_next/static/chunks/928-157527d567025d1d.js",revision:"157527d567025d1d"},{url:"/_next/static/chunks/966.1775eb621d8d3e09.js",revision:"1775eb621d8d3e09"},{url:"/_next/static/chunks/app/(auth)/login/page-381c14ea8b174e22.js",revision:"381c14ea8b174e22"},{url:"/_next/static/chunks/app/(auth)/register/page-3e4405e3d0d7952e.js",revision:"3e4405e3d0d7952e"},{url:"/_next/static/chunks/app/(main)/booking/confirm/page-088becd1ce523951.js",revision:"088becd1ce523951"},{url:"/_next/static/chunks/app/(main)/flights/%5BflightId%5D/seats/page-61de1351b084b51f.js",revision:"61de1351b084b51f"},{url:"/_next/static/chunks/app/(main)/flights/loading-2000da45234fad94.js",revision:"2000da45234fad94"},{url:"/_next/static/chunks/app/(main)/flights/page-eba4e7637f3175d7.js",revision:"eba4e7637f3175d7"},{url:"/_next/static/chunks/app/(main)/layout-2000da45234fad94.js",revision:"2000da45234fad94"},{url:"/_next/static/chunks/app/(main)/my-bookings/loading-2000da45234fad94.js",revision:"2000da45234fad94"},{url:"/_next/static/chunks/app/(main)/my-bookings/page-46ff6af5d8df46f5.js",revision:"46ff6af5d8df46f5"},{url:"/_next/static/chunks/app/(main)/page-70b01c564aa895c1.js",revision:"70b01c564aa895c1"},{url:"/_next/static/chunks/app/_global-error/page-2000da45234fad94.js",revision:"2000da45234fad94"},{url:"/_next/static/chunks/app/_not-found/page-2000da45234fad94.js",revision:"2000da45234fad94"},{url:"/_next/static/chunks/app/error-4b1656c9dedc9d18.js",revision:"4b1656c9dedc9d18"},{url:"/_next/static/chunks/app/layout-04f45b2452b94f4d.js",revision:"04f45b2452b94f4d"},{url:"/_next/static/chunks/app/not-found-1d2a44795f948d05.js",revision:"1d2a44795f948d05"},{url:"/_next/static/chunks/app/offline/page-f76936f7354b8d1e.js",revision:"f76936f7354b8d1e"},{url:"/_next/static/chunks/framework-93cda6578f6c76ec.js",revision:"93cda6578f6c76ec"},{url:"/_next/static/chunks/main-app-5bd934b69bb7de9a.js",revision:"5bd934b69bb7de9a"},{url:"/_next/static/chunks/main-da57dbaecc994914.js",revision:"da57dbaecc994914"},{url:"/_next/static/chunks/next/dist/client/components/builtin/app-error-2000da45234fad94.js",revision:"2000da45234fad94"},{url:"/_next/static/chunks/next/dist/client/components/builtin/forbidden-2000da45234fad94.js",revision:"2000da45234fad94"},{url:"/_next/static/chunks/next/dist/client/components/builtin/global-error-ed2cd9f94b5991f7.js",revision:"ed2cd9f94b5991f7"},{url:"/_next/static/chunks/next/dist/client/components/builtin/unauthorized-2000da45234fad94.js",revision:"2000da45234fad94"},{url:"/_next/static/chunks/polyfills-42372ed130431b0a.js",revision:"846118c33b2c0e922d7b3a7676f81f6f"},{url:"/_next/static/chunks/webpack-4c9e6c08dcc7a301.js",revision:"4c9e6c08dcc7a301"},{url:"/_next/static/css/0f5927a4693730f6.css",revision:"0f5927a4693730f6"},{url:"/_next/static/hQfjqMR1mAIjwdj4zT7tM/_buildManifest.js",revision:"0e72eb4163ad4c8f8e3bba78bab14ecd"},{url:"/_next/static/hQfjqMR1mAIjwdj4zT7tM/_ssgManifest.js",revision:"b6652df95db52feb4daf4eca35380933"},{url:"/file.svg",revision:"d09f95206c3fa0bb9bd9fefabfd0ea71"},{url:"/globe.svg",revision:"2aaafa6a49b6563925fe440891e32717"},{url:"/icons/icon-192.png",revision:"9ce344d4cf72541457001b184aa4ec2a"},{url:"/icons/icon-512.png",revision:"3c93fb274361e52a51883a2603c2429f"},{url:"/manifest.json",revision:"9c3ecfb7248f8fae69664c89e2de2ee3"},{url:"/next.svg",revision:"8e061864f388b47f33a1c3780831193e"},{url:"/vercel.svg",revision:"c0af2f507b369b085b35ef4bbe3bcf1e"},{url:"/window.svg",revision:"a2760511c65806022ad20adf74370ff3"}],{ignoreURLParametersMatching:[/^utm_/,/^fbclid$/]}),e.cleanupOutdatedCaches(),e.registerRoute("/",new e.NetworkFirst({cacheName:"start-url",plugins:[{cacheWillUpdate:async({response:e})=>e&&"opaqueredirect"===e.type?new Response(e.body,{status:200,statusText:"OK",headers:e.headers}):e}]}),"GET"),e.registerRoute(/^https:\/\/fonts\.(?:gstatic)\.com\/.*/i,new e.CacheFirst({cacheName:"google-fonts-webfonts",plugins:[new e.ExpirationPlugin({maxEntries:4,maxAgeSeconds:31536e3})]}),"GET"),e.registerRoute(/^https:\/\/fonts\.(?:googleapis)\.com\/.*/i,new e.StaleWhileRevalidate({cacheName:"google-fonts-stylesheets",plugins:[new e.ExpirationPlugin({maxEntries:4,maxAgeSeconds:604800})]}),"GET"),e.registerRoute(/\.(?:eot|otf|ttc|ttf|woff|woff2|font.css)$/i,new e.StaleWhileRevalidate({cacheName:"static-font-assets",plugins:[new e.ExpirationPlugin({maxEntries:4,maxAgeSeconds:604800})]}),"GET"),e.registerRoute(/\.(?:jpg|jpeg|gif|png|svg|ico|webp)$/i,new e.StaleWhileRevalidate({cacheName:"static-image-assets",plugins:[new e.ExpirationPlugin({maxEntries:64,maxAgeSeconds:2592e3})]}),"GET"),e.registerRoute(/\/_next\/static.+\.js$/i,new e.CacheFirst({cacheName:"next-static-js-assets",plugins:[new e.ExpirationPlugin({maxEntries:64,maxAgeSeconds:86400})]}),"GET"),e.registerRoute(/\/_next\/image\?url=.+$/i,new e.StaleWhileRevalidate({cacheName:"next-image",plugins:[new e.ExpirationPlugin({maxEntries:64,maxAgeSeconds:86400})]}),"GET"),e.registerRoute(/\.(?:mp3|wav|ogg)$/i,new e.CacheFirst({cacheName:"static-audio-assets",plugins:[new e.RangeRequestsPlugin,new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:86400})]}),"GET"),e.registerRoute(/\.(?:mp4|webm)$/i,new e.CacheFirst({cacheName:"static-video-assets",plugins:[new e.RangeRequestsPlugin,new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:86400})]}),"GET"),e.registerRoute(/\.(?:js)$/i,new e.StaleWhileRevalidate({cacheName:"static-js-assets",plugins:[new e.ExpirationPlugin({maxEntries:48,maxAgeSeconds:86400})]}),"GET"),e.registerRoute(/\.(?:css|less)$/i,new e.StaleWhileRevalidate({cacheName:"static-style-assets",plugins:[new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:86400})]}),"GET"),e.registerRoute(/\/_next\/data\/.+\/.+\.json$/i,new e.StaleWhileRevalidate({cacheName:"next-data",plugins:[new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:86400})]}),"GET"),e.registerRoute(/\.(?:json|xml|csv)$/i,new e.NetworkFirst({cacheName:"static-data-assets",plugins:[new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:86400})]}),"GET"),e.registerRoute(({sameOrigin:e,url:{pathname:s}})=>!(!e||s.startsWith("/api/auth/callback")||!s.startsWith("/api/")),new e.NetworkFirst({cacheName:"apis",networkTimeoutSeconds:10,plugins:[new e.ExpirationPlugin({maxEntries:16,maxAgeSeconds:86400})]}),"GET"),e.registerRoute(({request:e,url:{pathname:s},sameOrigin:a})=>"1"===e.headers.get("RSC")&&"1"===e.headers.get("Next-Router-Prefetch")&&a&&!s.startsWith("/api/"),new e.NetworkFirst({cacheName:"pages-rsc-prefetch",plugins:[new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:86400})]}),"GET"),e.registerRoute(({request:e,url:{pathname:s},sameOrigin:a})=>"1"===e.headers.get("RSC")&&a&&!s.startsWith("/api/"),new e.NetworkFirst({cacheName:"pages-rsc",plugins:[new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:86400})]}),"GET"),e.registerRoute(({url:{pathname:e},sameOrigin:s})=>s&&!e.startsWith("/api/"),new e.NetworkFirst({cacheName:"pages",plugins:[new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:86400})]}),"GET"),e.registerRoute(({sameOrigin:e})=>!e,new e.NetworkFirst({cacheName:"cross-origin",networkTimeoutSeconds:10,plugins:[new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:3600})]}),"GET")});
+const CACHE_NAME = 'skybook-v1';
+const OFFLINE_URL = '/offline';
+
+const PRECACHE_ASSETS = [
+  OFFLINE_URL,
+];
+
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open(CACHE_NAME).then((cache) => {
+      return cache.addAll(PRECACHE_ASSETS);
+    })
+  );
+  self.skipWaiting();
+});
+
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
+    caches.keys().then((cacheNames) => {
+      return Promise.all(
+        cacheNames
+          .filter((name) => name !== CACHE_NAME)
+          .map((name) => caches.delete(name))
+      );
+    })
+  );
+  self.clients.claim();
+});
+
+self.addEventListener('fetch', (event) => {
+  const url = new URL(event.request.url);
+
+  // CacheFirst for static assets
+  if (url.pathname.startsWith('/_next/static/')) {
+    event.respondWith(
+      caches.match(event.request).then((cachedResponse) => {
+        if (cachedResponse) return cachedResponse;
+        return fetch(event.request).then((networkResponse) => {
+          return caches.open(CACHE_NAME).then((cache) => {
+            cache.put(event.request, networkResponse.clone());
+            return networkResponse;
+          });
+        });
+      })
+    );
+    return;
+  }
+
+  // StaleWhileRevalidate for /flights* and Supabase API calls
+  if (url.pathname.startsWith('/flights') || url.hostname.includes('supabase.co')) {
+    event.respondWith(
+      caches.match(event.request).then((cachedResponse) => {
+        const fetchPromise = fetch(event.request).then((networkResponse) => {
+          caches.open(CACHE_NAME).then((cache) => {
+            cache.put(event.request, networkResponse.clone());
+          });
+          return networkResponse;
+        });
+        return cachedResponse || fetchPromise;
+      })
+    );
+    return;
+  }
+
+  // NetworkFirst for all other pages
+  if (event.request.mode === 'navigate' || event.request.method === 'GET') {
+    event.respondWith(
+      fetch(event.request)
+        .then((networkResponse) => {
+          return caches.open(CACHE_NAME).then((cache) => {
+            cache.put(event.request, networkResponse.clone());
+            return networkResponse;
+          });
+        })
+        .catch(() => {
+          return caches.match(event.request).then((cachedResponse) => {
+            if (cachedResponse) return cachedResponse;
+            if (event.request.mode === 'navigate') {
+              return caches.match(OFFLINE_URL);
+            }
+            return new Response('Network error happened', {
+              status: 408,
+              headers: { 'Content-Type': 'text/plain' },
+            });
+          });
+        })
+    );
+    return;
+  }
+});

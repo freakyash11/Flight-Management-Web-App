@@ -1,82 +1,38 @@
 'use client';
 
-import Link from 'next/link';
 import { useUserStore } from '@/store/useUserStore';
-import { BookingCard } from '@/components/bookings';
-import { useEffect, useState } from 'react';
 
 export default function OfflinePage() {
-  const cachedBookings = useUserStore((s) => s.cachedBookings);
-  const [isClient, setIsClient] = useState(false);
-  
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
+  const session = useUserStore((s) => s.session);
 
   return (
-    <div className="min-h-screen bg-slate-50 flex flex-col">
-      {/* ── Page header ──────────────────────────────────────────────────── */}
-      <div className="bg-slate-800 border-b border-slate-700 pb-8 pt-12">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="w-16 h-16 bg-slate-700 rounded-full flex items-center justify-center text-3xl mx-auto mb-4">
-            📡
-          </div>
-          <h1 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mb-2">
-            You're offline
-          </h1>
-          <p className="text-slate-400 text-sm max-w-md mx-auto">
-            It looks like you've lost your internet connection. Some functionality is unavailable, but you can still view your recently cached bookings below.
-          </p>
-          
-          <div className="mt-6">
-            <button 
-              onClick={() => window.location.reload()}
-              className="px-6 py-2 bg-slate-700 hover:bg-slate-600 text-white rounded-lg text-sm font-semibold transition-colors"
-            >
-              Try to reconnect
-            </button>
-          </div>
-        </div>
+    <div className="min-h-screen bg-[#0a1628] text-white flex flex-col items-center justify-center p-4">
+      <div className="mb-6">
+        <svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-slate-400">
+          <path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.2-1.1.5l-1.3 2.5c-.3.5.1 1.2.6 1.4l5.6 2.3-2.1 2.1L3.8 14c-.3-.1-.6 0-.8.2L1.8 15.4c-.4.4-.2 1.1.3 1.3L5.4 18l1.3 3.3c.2.5.9.7 1.3.3l1.2-1.2c.2-.2.3-.5.2-.8L8.1 16l2.1-2.1 2.3 5.6c.2.5.9.9 1.4.6l2.5-1.3c.3-.2.6-.6.5-1.1z"/>
+          <line x1="2" y1="2" x2="22" y2="22"/>
+        </svg>
       </div>
-
-      {/* ── Cached Bookings ──────────────────────────────────────────────── */}
-      <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10 w-full flex-1">
-        <h2 className="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2">
-          <span className="w-2 h-2 rounded-full bg-slate-300 inline-block"></span>
-          Cached Bookings
-        </h2>
-        
-        {!isClient ? (
-          <div className="text-center py-10 text-slate-500">Loading offline data...</div>
-        ) : cachedBookings.length === 0 ? (
-          <div className="bg-white rounded-xl border border-slate-200 p-8 text-center shadow-sm">
-            <p className="text-slate-500">No cached bookings found.</p>
-            <p className="text-xs text-slate-400 mt-2">
-              Bookings will appear here after you view them while online.
-            </p>
-          </div>
-        ) : (
-          <div className="space-y-4">
-            <div className="bg-blue-50 border border-blue-100 rounded-xl p-3 mb-2 flex gap-3 text-sm text-blue-800">
-              <span className="shrink-0 text-blue-500">ℹ️</span>
-              <p>
-                You are viewing an offline copy of your bookings. Cancellations or changes cannot be made until you reconnect.
-              </p>
-            </div>
-            
-            {cachedBookings.map((booking) => (
-              <div key={booking.id} className="opacity-90 grayscale-[0.2] pointer-events-none">
-                <BookingCard booking={booking} />
-              </div>
-            ))}
-          </div>
-        )}
-      </main>
+      <h1 className="text-4xl font-bold mb-4">You are offline</h1>
+      <p className="text-lg text-slate-300 mb-8 text-center max-w-md">
+        It looks like you've lost your internet connection. Don't worry, some features might still be available.
+      </p>
       
-      {/* ── Footer ──────────────────────────────────────────────────────── */}
-      <footer className="py-6 text-center text-xs text-slate-400 border-t border-slate-200">
-        <p>SkyBook Offline Mode</p>
-      </footer>
+      {session ? (
+        <div className="bg-slate-800 p-6 rounded-xl border border-slate-700 w-full max-w-md">
+          <div className="flex items-center gap-3 mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-blue-400">
+              <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+            </svg>
+            <h2 className="text-xl font-semibold">Cached Bookings</h2>
+          </div>
+          <p className="text-slate-400">
+            Check your booked flights (if previously cached) from your dashboard when the connection is unstable.
+          </p>
+        </div>
+      ) : (
+        <p className="text-slate-400">Please connect to the internet to book and manage flights.</p>
+      )}
     </div>
   );
 }

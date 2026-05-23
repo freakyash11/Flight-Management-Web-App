@@ -9,13 +9,16 @@ export const metadata: Metadata = {
   manifest: '/manifest.json',
   appleWebApp: {
     capable: true,
-    statusBarStyle: 'default',
+    statusBarStyle: 'black-translucent',
     title: 'SkyBook',
+  },
+  icons: {
+    apple: '/icons/icon-192.png',
   },
 };
 
-export const viewport = {
-  themeColor: '#0f172a',
+export const viewport: Viewport = {
+  themeColor: '#0a1628',
 };
 
 export default function RootLayout({
