@@ -172,8 +172,24 @@ Real-time seat mapping is managed by the client-side hook [useRealtime.ts](file:
 
 ---
 
-## PWA Lighthouse Score
+## PWA Implementation
 
-Below is the Google Lighthouse audit demonstrating compliance with Progressive Web Application standards, performance, and best practices:
+PWA is fully configured with:
+- Custom service worker (public/sw.js) with offline caching
+- Web app manifest (public/manifest.json)
+- Offline fallback page (/offline)
+- Install prompt banner for mobile users
 
-![Lighthouse Score Placeholder](https://placehold.co/800x400/0a1628/ffffff?text=Lighthouse+PWA+Score+100/100)
+### Verified via Chrome DevTools
+
+**Manifest:**
+![Manifest](./docs/manifest-check.png)
+
+**Service Worker:**
+![Service Worker](./docs/sw-check.png)
+
+### Lighthouse Scores (Production)
+- Performance: 77/100
+- Best Practices: 100/100
+
+![Lighthouse](./docs/lighthouse.pdf)
